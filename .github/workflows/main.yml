@@ -7,4 +7,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Use secret
-      run: echo ${{ secrets.SECRET_NAME }}
+      run: echo ${{ secrets.OPENAI_API_KEY }}
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
